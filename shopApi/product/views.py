@@ -4,6 +4,6 @@ from .models import Category
 from .serializers import CategorySerializer
 
 # Create your views here.
-class CategoryViewSet(generics.ListAPIView):
+class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
