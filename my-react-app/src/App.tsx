@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import CategoryListPage from "./pages/Category/CategoryListPage.tsx";
+
 import CategoryCreatePage from "./pages/Category/CategoryCreatePage.tsx";
 // import CategoryCreatePage from "./pages/Category/CategoryCreatePage.tsx";
 
