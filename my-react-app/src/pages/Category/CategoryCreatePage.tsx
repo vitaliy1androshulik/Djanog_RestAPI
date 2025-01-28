@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Form, Input} from "antd";
+import {Button, Form, Input, notification} from "antd";
 import {ICategoryPostRequest} from "./types.ts";
 import TextArea from "antd/es/input/TextArea";
 import {useNavigate} from "react-router-dom";
@@ -20,8 +20,15 @@ const CategoryCreatePage: React.FC = () => {
 
             console.log("Категорія успішно створена:", response);
             navigate("..");
+            notification.success({
+                message: 'Категорія створена :',
+                description: 'Категорія успішно створена!',
+            });
         } catch (error) {
-            console.error("Помилка під час створення категорії:", error);
+            notification.error({
+                message: 'Помилка редагування категорії',
+                description: 'Щось пішло не так, спробуйте ще раз.',
+            });
         }
 
     }

@@ -1,4 +1,4 @@
-export interface ICategoryItem{
+export interface ICategoryItem {
     id: number;                  // Унікальний ідентифікатор категорії (можна додати якщо є поле 'id')
     name: string;                // Назва категорії
     slug: string;                // URL-ідентифікатор
@@ -7,9 +7,13 @@ export interface ICategoryItem{
     updated_at: string;          // Дата оновлення (тип для DateTime)
 }
 
-// CategoryModel.ts
+
 export interface ICategoryPostRequest {
     name: string;         // Назва категорії (обов'язкове поле)
     slug: string;         // Унікальний ідентифікатор (обов'язкове поле)
     description?: string; // Опис (необов'язкове поле)
+}
+
+export interface ICategoryPutRequest extends Partial<ICategoryPostRequest> {
+    id: number;
 }
